@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+    	<parameter key="webit_price_comparator_core.exposer_provider.class">Webit\PriceComparator\PriceComparatorCoreBundle\Exposer\OfferExposerProvider</parameter>
+        <parameter key="webit_price_comparator_core.expose_controller.class">Webit\PriceComparator\PriceComparatorCoreBundle\Controller\ExposeController</parameter>
+    </parameters>
+
+    <services>
+    	<service id="webit_price_comparator_core.exposer_provider" class="%webit_price_comparator_core.exposer_provider.class%" />
+        <service id="webit_price_comparator_core.expose_controller" class="%webit_price_comparator_core.expose_controller.class%">
+            <argument type="service" id="exposer_provider" />
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>
+    </services>
+</container>
