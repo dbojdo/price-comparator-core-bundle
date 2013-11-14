@@ -2,11 +2,11 @@
 
 
 
-namespace Webit\PriceComparator\PriceComparatorCoreBundle;
+namespace Webit\Bundle\PriceComparatorCoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Webit\PriceComparator\PriceComparatorCoreBundle\DependencyInjection\Compiler\OfferExposerPass;
+use Webit\Bundle\PriceComparatorCoreBundle\DependencyInjection\Compiler\OfferExposerPass;
 
 
 class WebitPriceComparatorCoreBundle extends Bundle

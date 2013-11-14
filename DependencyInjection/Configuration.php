@@ -1,6 +1,6 @@
 <?php
 
-namespace Webit\PriceComparator\PriceComparatorCoreBundle\DependencyInjection;
+namespace Webit\Bundle\PriceComparatorCoreBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

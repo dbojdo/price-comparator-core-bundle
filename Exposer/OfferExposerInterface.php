@@ -1,5 +1,5 @@
 <?php
-namespace Webit\PriceComparator\PriceComparatorCoreBundle\Exposer;
+namespace Webit\Bundle\PriceComparatorCoreBundle\Exposer;
 
 interface OfferExposerInterface {
     

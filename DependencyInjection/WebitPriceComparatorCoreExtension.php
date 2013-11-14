@@ -1,6 +1,6 @@
 <?php
 
-namespace Webit\PriceComparator\PriceComparatorCoreBundle\DependencyInjection;
+namespace Webit\Bundle\PriceComparatorCoreBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

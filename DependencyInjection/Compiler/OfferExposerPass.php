@@ -1,5 +1,5 @@
 <?php
-namespace Webit\PriceComparator\PriceComparatorCoreBundle\DependencyInjection\Compiler;
+namespace Webit\Bundle\PriceComparatorCoreBundle\DependencyInjection\Compiler;
 use Symfony\Component\DependencyInjection\Definition;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;

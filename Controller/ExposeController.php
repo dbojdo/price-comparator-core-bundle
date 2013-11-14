@@ -1,9 +1,9 @@
 <?php
 
-namespace Webit\PriceComparator\PriceComparatorCoreBundle\Controller;
+namespace Webit\Bundle\PriceComparatorCoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Webit\PriceComparator\PriceComparatorCoreBundle\Exposer\OfferExposerProviderInterface;
+use Webit\Bundle\PriceComparatorCoreBundle\Exposer\OfferExposerProviderInterface;
 
 class ExposeController extends Controller
 {
