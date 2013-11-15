@@ -14,11 +14,11 @@ class OfferExposerPass implements CompilerPassInterface {
         $provider = $container->getDefinition('webit_price_comparator_core.exposer_provider');
         $arIds = $container->findTaggedServiceIds('webit_price_comparator_core.offer_exposer');
         foreach($arIds as $id=>$tag) {
-            if(isset($tag[0]['name']) == false || empty($tag[0]['name'])) {
-                throw new \RuntimeException('Missing required tag attribute "name" for service "'.$id.'" tagged "webit_price_comparator_core.offer_exposer"');    
+            if(isset($tag[0]['exposer_name']) == false || empty($tag[0]['exposer_name'])) {
+                throw new \RuntimeException('Missing required tag attribute "exposer_name" for service "'.$id.'" tagged "webit_price_comparator_core.offer_exposer"');    
             }
             
-            $name = $tag[0]['name'];
+            $name = $tag[0]['exposer_name'];
             $provider->addMethodCall('registerOfferExposer',array($container->getDefinition($id), $name));
         }
     }

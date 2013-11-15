@@ -5,10 +5,11 @@ interface OfferExposerInterface {
     
     /**
      * 
+     * @param bool $refresh
      * @param string $format
      * @return \SplFileInfo
      */
-    public function getOffersFile($format = 'xml');
+    public function getOffersFile($refresh = false, $format = 'xml');
     
     /**
      * @return array
