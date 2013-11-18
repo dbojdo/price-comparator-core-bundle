@@ -14,5 +14,5 @@ interface OfferExposerProviderInterface {
      * 
      * @param OfferExposerInterface $exposer
      */
-    public function registerOfferExposer(OfferExposerInterface $exposer);
+    public function registerOfferExposer(OfferExposerInterface $exposer, $name);
 }

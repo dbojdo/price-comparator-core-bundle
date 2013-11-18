@@ -12,7 +12,7 @@
     <services>
     	<service id="webit_price_comparator_core.exposer_provider" class="%webit_price_comparator_core.exposer_provider.class%" />
         <service id="webit_price_comparator_core.expose_controller" class="%webit_price_comparator_core.expose_controller.class%">
-            <argument type="service" id="exposer_provider" />
+            <argument type="service" id="webit_price_comparator_core.exposer_provider" />
             <call method="setContainer">
                 <argument type="service" id="service_container" />
             </call>
