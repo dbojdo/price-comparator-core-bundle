@@ -4,6 +4,7 @@ namespace Webit\Bundle\PriceComparatorCoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Webit\Bundle\PriceComparatorCoreBundle\Exposer\OfferExposerProviderInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 class ExposeController extends Controller
 {
