@@ -22,10 +22,22 @@ class ExposeController extends Controller
     public function exposeAction($comparator, $_format) {
         $exposer = $this->exposerProvider->getOfferExposer($comparator);
         if($exposer == null || in_array($_format, $exposer->getSupportedFormats()) == false) {
-            throw $this->createNotFoundException('Unsupported comparator of format.');
+            throw $this->createNotFoundException('Unsupported comparator or format.');
         }
         
-        $file = $exposer->getOffersFile($_format);
+        $file = $exposer->getOffersFile(false, $_format);
+        $response = $this->createResponse($file, $_format);
+        
+        return $response;
+    }
+    
+    public function generateAction($comparator, $_format) {
+        $exposer = $this->exposerProvider->getOfferExposer($comparator);
+        if($exposer == null || in_array($_format, $exposer->getSupportedFormats()) == false) {
+            throw $this->createNotFoundException('Unsupported comparator or format.');
+        }
+        
+        $file = $exposer->getOffersFile(true, $_format);
         $response = $this->createResponse($file, $_format);
         
         return $response;

@@ -7,4 +7,7 @@
     <route id="webit_price_comparator_expose" pattern="/{comparator}.{_format}">
         <default key="_controller">webit_price_comparator_core.expose_controller:exposeAction</default>
     </route>
+    <route id="webit_price_comparator_generate" pattern="/generate/{comparator}.{_format}">
+        <default key="_controller">webit_price_comparator_core.expose_controller:generateAction</default>
+    </route>
 </routes>
